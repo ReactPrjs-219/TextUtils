@@ -7,23 +7,26 @@ export default function TextForm(props) {
             let newText;
             newText = text.toUpperCase(); 
             setText(newText);
+            props.showAlert("Changed to uppercase","success");
     }
     const onLoClick= () =>{
       let newText;
       newText = text.toLowerCase(); 
       setText(newText);
+      props.showAlert("Changed to lowercase","success");
     }
     const onClearClick= () =>{
       let newText;
       newText = ""; 
       setText(newText);
+      props.showAlert("Text Cleared","success");
     }
     const onReplaceText= () =>{
      let newText= prompt("Enter to replace");      
       setText(newText);
+      props.showAlert("Text Replaced","success");
     }
     const onTextChange= (event) =>{
-        
         setText(event.target.value);
     }
     
